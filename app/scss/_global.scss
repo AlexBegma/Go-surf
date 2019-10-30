@@ -12,6 +12,10 @@ a {
 	text-decoration: none;
 }
 
+a:hover {
+	transition: .6s;
+}
+
 .suptitle-left {
 	font-size: 22px;
 	line-height: 32px;
