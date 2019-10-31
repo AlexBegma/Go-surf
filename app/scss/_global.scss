@@ -58,7 +58,7 @@ a:hover {
 		color: rgba($white, .02);
 
 		position: relative;
-		top: 160px;
+		top: 110px;
 	}
 	h3 {
 		margin: 0;
@@ -78,5 +78,18 @@ a:hover {
 			height: 1px;
 			background-color: $green;
 		}
+	}
+}
+
+.subtitle {
+	display: inline-block;
+}
+
+.subtitle__head {
+	font-size: 40px;
+	font-weight: 800;
+
+	span {
+		font-weight: 100;
 	}
 }
