@@ -11,7 +11,9 @@ $(function(){
 	$('.slider-dots').slick({
 		slidesToShow: 4,
 		slidesToScroll: 4,
-		asNavFor: '.header__slider'
+		asNavFor: '.header__slider',
+		// centerMode: true,
+		// focusOnSelect: true
 	});
 
 });
