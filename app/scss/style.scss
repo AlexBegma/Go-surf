@@ -243,26 +243,126 @@
 	text-align: right;
 }
 
-.surf-box {
-	width: 390px;
-	height: 750px;
-	position: relative;
-	display: block;
-	background-color: red;
+.slick-slide:nth-child(4n + 1) {
+	.surf-box {
+		margin-top: 30px;
+	}
 }
 
-.surf-box__inner {
-	background-image: url(../img/surf-slide-1.png);
-	background-repeat: no-repeat;
-	position: absolute;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
+.slick-slide:nth-child(4n + 3) {
+	.surf-box {
+		margin-top: 90px;
+	}
 }
+
+.surf-slider {
+	position: relative;
+	padding-top: 80px;
+
+	.surf-box {
+		width: 400px;
+		height: 750px;
+		position: relative;
+		display: block;
+		background-color: $bg-img;
+
+		&__inner {
+			background-repeat: no-repeat;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			opacity: .7;
+		}
+
+
+		&__inner.inner-1 {
+			background-image: url(../img/surf-slide-1.png);
+		}
+
+		&__inner.inner-1:hover {
+			opacity: 1;
+			transition: .4s;
+
+			.btn-box {
+				display: block;
+			}
+		}
+
+		&__inner.inner-2 {
+			background-image: url(../img/surf-slide-2.png);
+		}
+
+		&__inner.inner-2:hover {
+			opacity: 1;
+			transition: .4s;
+
+			.btn-box {
+				display: block;
+			}
+		}
+
+		&__inner.inner-3 {
+			background-image: url(../img/surf-slide-3.png);
+		}
+		&__inner.inner-3:hover {
+			opacity: 1;
+			transition: .4s;
+
+			.btn-box {
+				display: block;
+			}
+		}
+
+		&__inner.inner-4 {
+			background-image: url(../img/surf-slide-4.png);
+		}
+
+		&__inner.inner-4:hover {
+			opacity: 1;
+			transition: .4s;
+
+			.btn-box {
+				display: block;
+			}
+		}
+
+		&__inner-title {
+			font-weight: 800;
+			font-size: 40px;
+			width: 140px;
+			height: 72px;
+			position: absolute;
+			top: 72px;
+			left: 40px;
+			color: $white;
+		}
+
+		&__inner-location {
+			font-size: 18px;
+			line-height: 22px;
+			letter-spacing: 8px;
+			transform: rotate(-90deg);
+			position: absolute;
+			left: -90px;
+			bottom: 240px;
+		}
+	}
+
+	.btn-box {
+		position: absolute;
+		bottom: 0;
+		margin-left: calc(50% - 140px);
+		height: 80px;
+		display: none;
+	}
+}
+
+
 
 
 
