@@ -19,6 +19,16 @@ $(function(){
 		nextArrow: '<img class="slider-arrow slider-arrow__right" src="img/arrow-right.svg" alt="arrow-right">',
 		slidesToShow: 4,
 		slidesToScroll: 1,
+		asNavFor: '.map',
+
+	});
+
+	$('.map').slick({
+		slidesToShow: 8,
+		slidesToScroll: 1,
+		arrows: false,
+		asNavFor: '.surf-slider',
+		focusOnSelect: true,
 	});
 
 });
