@@ -257,13 +257,60 @@
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
 
-// .map__image {
-// 	max-width: 1200px;
-// 	max-height: 635px;
-// 	margin: 0 auto;
-// }
+	.slick-list {
+		min-height: 670px;
+	}
+
+	.slick-current {
+		.map__content,
+		.coordinates {
+			display: flex;
+		}
+		.map__content {
+			width: 285px;
+			padding: 30px;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: space-between;
+			position: absolute;
+			top: -217px;
+			left: -125px;
+			background-color: $black;
+			border-radius: 15px;
+		}
+		.coordinates {
+			position: absolute;
+			top: -22px;
+			left: -117px;
+		}
+		.map__content-rowUp,
+		.map__content-rowLow {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.map__circle {
+			background-color: $white;
+		}
+		.map__content.content-1 {
+			left: -3px;
+			top: 25px;
+		}
+		.coordinates.content-1 {
+			left: 7px;
+			top: 220px;
+		}
+		.map__content.content-8 {
+			left: -195px;
+			top: -218px;
+		}
+		.coordinates.content-8 {
+			left: -188px;
+			top: -23px;
+		}
+	}
+}
 
 .map__circle {
 	max-width: 24px;
@@ -314,8 +361,18 @@
 }
 
 .map__content {
-	width: 283px;
+	width: 285px;
 	height: 216px;
+	display: none;
+}
+
+.map__content-item img {
+	margin-bottom: 10px;
+}
+
+.map__content-name {
+	font-size: 11px;
+	line-height: 1.5;
 }
 
 .map__content-head {
@@ -325,16 +382,41 @@
 	letter-spacing: 2px;
 }
 
-.map__content-title span {
-	font-size: 16px;
-	line-height: 19px;
-	letter-spacing: 2px;
-	width: 109px;
+.map__content-title {
+	font-size: 18px;
+	font-weight: 800;
+	position: relative;
+	&::before {
+		position: absolute;
+		content: "";
+		background-color: $green;
+		width: 80px;
+		height: 1px;
+		left: 0;
+		top: 27px;
+	}
 }
 
-.slick-track {
-	height: 635px;
+.map__content-head span {
+	font-size: 16px;
+	width: 109px;
+	text-transform: capitalize;
 }
+
+.coordinates {
+	transform: rotate(-90deg);
+	transform-origin: left top 0;
+	position: absolute;
+	display: none;
+}
+
+.coordinates span {
+	font-size: 16px;
+}
+
+// .map .slick-track {
+// 	height: 635px;
+// }
 
 .slick-slide:nth-child(4n + 1) {
 	.surf-box {
@@ -351,6 +433,10 @@
 .surf-slider {
 	position: relative;
 	padding-top: 80px;
+}
+
+.slick-slide img {
+	padding-top: 3px;
 }
 
 .surf-box {
