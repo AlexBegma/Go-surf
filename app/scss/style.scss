@@ -535,7 +535,162 @@
 	display: none;
 }
 
-.travel-slider__btn {
+///   travel   ///
+
+.travel {
+	margin-bottom: 120px;
+}
+
+.travel-slider__arrow-right,
+.sleep-slider__arrow-right {
+	position: absolute;
+	content: "";
+	right: 15px;
+}
+
+.travel-slider__head {
+	background-image: url(../img/travel-image-copy.png);
+}
+
+.sleep-slider__head {
+	background-image: url(../img/sleep-image.png);
+}
+
+.travel-slider__head,
+.sleep-slider__head {
+	background-position: left top;
+	background-repeat: no-repeat;
+	min-height: 740px;
+}
+
+.travel-slider__subtitle,
+.sleep-slider__subtitle {
+	margin: 100px 40px 0;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.subtitle {
+	text-align: right;
+
+	&__arrows {
+		display: flex;
+		justify-content: space-between;
+		width: 70px;
+		text-align: right;
+		opacity: .5;
+		margin: 20px 0 0 430px;
+	}
+}
+
+.subtitle__head {
+	font-size: 40px;
+	font-weight: 800;
+	display: flex;
+	align-items: center;
+}
+
+.subtitle__head-right {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.subtitle__head-left {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.subtitle__head-star {
+	margin-left: 45px;
+	width: 315px;
+}
+
+.travel-slider__descr,
+.sleep-slider__descr {
+	position: relative;
+	margin: 0 0 100px;
+	display: flex;
+	flex-direction: row;
+	// justify-content: space-around;
+	align-items: center;
+	max-width: 1440px;
+}
+
+.descr {
+	width: 550px;
+	margin-left: 80px;
+
+	&__head img {
+		opacity: 0.9;
+		margin-left: 40px;
+	}
+}
+
+.bitmap-airline {
+	position: absolute;
+	right: 0;
+	top: -200px;
+	width: 723px;
+	height: 377px;
+	background-image: url(../img/bitmap-airline.png);
+	background-position: right center;
+	background-repeat: no-repeat;
+}
+
+.travel-slider__info,
+.sleep-slider__info {
+	display: flex;
+	justify-content: space-around;
+	padding: 0 40px 0;
+	height: 300px;
+}
+
+.travel-slider__info-item,
+.sleep-slider__info-item {
+	position: relative;
+	width: 23%;
+	// justify-content: space-around;
+	padding-left: 40px;
+	// text-align: center;
+	// justify-content: center;
+	// align-items: center;
+	span {
+		font-size: 14px;
+		line-height: 36px;
+		text-align: right;
+		letter-spacing: 5.25px;
+		opacity: 0.75;
+		padding-left: 90px;
+		align-items: center;
+	}
+}
+
+.travel-slider__info-subtitle,
+.sleep-slider__info-subtitle {
+	position: absolute;
+	left: -75px;
+	top: 27%;
+	width: 195px;
+	font-size: 18px;
+	text-align: right;
+	letter-spacing: 8px;
+	mix-blend-mode: normal;
+	opacity: 0.5;
+	transform: rotate(-90deg);
+}
+
+.travel-slider__info-title,
+.sleep-slider__info-title {
+	font-weight: 800;
+	font-size: 34px;
+	line-height: 36px;
+	letter-spacing: 6px;
+}
+
+.travel-slider__btn,
+.sleep-slider__btn {
 	position: relative;
 	font-style: normal;
 	font-weight: 800;
@@ -579,111 +734,33 @@
 	top: -280px;
 }
 
-.travel-slider__arrow-right {
-	position: absolute;
-	content: "";
-	right: 15px;
+///   sleep   ///
+
+.sleep-slider__descr img {
+	// width: 24px;
+	// height: 24px;
+	margin-left: 0;
 }
 
-.travel-slider__head {
-	background-image: url(../img/travel-image-copy.png);
-	background-position: left top;
-	background-repeat: no-repeat;
-	min-height: 740px;
-}
-
-.travel-slider__subtitle {
-	margin: 100px 40px 0;
-	display: flex;
-	justify-content: flex-end;
-}
-
-.subtitle {
-	text-align: right;
-
-	&__arrows {
-		display: flex;
-		justify-content: space-between;
-		width: 70px;
-		text-align: right;
-		opacity: .5;
-		margin: 20px 0 0 430px;
-	}
-}
-
-.travel-slider__descr {
-	position: relative;
-	margin: 0 0 100px;
-	display: flex;
-	flex-direction: row;
-	// justify-content: space-around;
-	align-items: center;
-	max-width: 1440px;
-}
-
-.descr {
-	width: 450px;
-	margin-left: 80px;
-
-	&__head img {
-		opacity: 0.9;
-		margin-left: 40px;
-	}
-}
-
-.bitmap-airline {
+.hammock {
 	position: absolute;
 	right: 0;
 	top: -200px;
 	width: 723px;
 	height: 377px;
-	background-image: url(../img/bitmap-airline.png);
+	background-image: url(../img/hammock.png);
 	background-position: right center;
 	background-repeat: no-repeat;
 }
 
-.travel-slider__info {
-	display: flex;
-	justify-content: space-around;
-	padding: 0 40px 0;
-	height: 300px;
-}
-.travel-slider__info-item {
-	position: relative;
-	width: 23%;
-	// justify-content: space-around;
-	padding-left: 40px;
-	// text-align: center;
-	// justify-content: center;
-	// align-items: center;
-	span {
-		font-size: 14px;
-		line-height: 36px;
-		text-align: right;
-		letter-spacing: 5.25px;
-		opacity: 0.75;
-		padding-left: 90px;
-	}
-}
-
-.travel-slider__info-subtitle{
+.sleep-slider__btn-image {
 	position: absolute;
-	left: -75px;
-	top: 27%;
-	width: 195px;
-	font-size: 18px;
-	text-align: right;
-	letter-spacing: 8px;
-	mix-blend-mode: normal;
-	opacity: 0.5;
-	transform: rotate(-90deg);
-}
-
-.travel-slider__info-title {
-	font-weight: 800;
-	font-size: 34px;
-	line-height: 36px;
-	letter-spacing: 6px;
+	right: 0;
+	top: -480px;
+	height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 
