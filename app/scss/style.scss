@@ -704,11 +704,18 @@
 }
 
 .travel-slider__info-title,
-.sleep-slider__info-title {
+.sleep-slider__info-title,
+.summ {
+	display: flex;
 	font-weight: 800;
 	font-size: 34px;
 	line-height: 36px;
 	letter-spacing: 6px;
+	color: $white;
+}
+
+.summ {
+	margin-right: 10px;
 }
 
 .travel-slider__btn,
