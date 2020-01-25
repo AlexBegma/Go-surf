@@ -656,16 +656,38 @@
 	// text-align: center;
 	// justify-content: center;
 	// align-items: center;
+
 	span {
 		font-size: 14px;
 		line-height: 36px;
 		text-align: right;
 		letter-spacing: 5.25px;
 		opacity: 0.75;
-		padding-left: 90px;
+		padding-left: 80px;
 		align-items: center;
 	}
 }
+
+// .minus,
+// .plus {
+// 	position: relative;
+// 	width: 14px;
+// 	height: 36px;
+// 	margin-top: 10px;
+
+// 	img {
+// 		position: absolute;
+// 		left: 0;
+// 	}
+// }
+
+// .minus img {
+// 	top: 5px;
+// }
+
+// .minus {
+// 	margin-right: 20px;
+// }
 
 .travel-slider__info-subtitle,
 .sleep-slider__info-subtitle {
@@ -734,14 +756,14 @@
 	top: -280px;
 }
 
-///   sleep   ///
-
 .sleep-slider__descr img {
 	// width: 24px;
 	// height: 24px;
 	margin-left: 0;
 }
 
+
+// sleep/////////////////////
 .hammock {
 	position: absolute;
 	right: 0;

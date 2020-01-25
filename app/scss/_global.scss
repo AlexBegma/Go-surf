@@ -40,15 +40,15 @@ a:hover {
 	padding-left: 103px;
 	position: relative;
 	display: inline-block;
-		&::before {
-			position: absolute;
-			content: "";
-			width: 80px;
-			height: 1px;
-			background-color: $white;
-			left: 0;
-			top: 50%;
-		}
+	&::before {
+		position: absolute;
+		content: "";
+		width: 80px;
+		height: 1px;
+		background-color: $white;
+		left: 0;
+		top: 50%;
+	}
 }
 
 .headline-right {
@@ -61,15 +61,15 @@ a:hover {
 	padding-left: 103px;
 	position: relative;
 	display: inline-block;
-		&::before {
-			position: absolute;
-			content: "";
-			width: 80px;
-			height: 1px;
-			background-color: $white;
-			left: 0;
-			top: 50%;
-		}
+	&::before {
+		position: absolute;
+		content: "";
+		width: 80px;
+		height: 1px;
+		background-color: $white;
+		left: 0;
+		top: 50%;
+	}
 }
 
 .title-main {
@@ -113,4 +113,76 @@ a:hover {
 	span {
 		font-weight: 100;
 	}
+}
+
+// CodePen Home
+// input number custom style
+.quantity {
+	position: relative;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number]
+{
+	-moz-appearance: textfield;
+}
+
+.quantity input {
+	width: 45px;
+	height: 35px;
+	line-height: 1.65;
+	float: left;
+	display: block;
+	padding: 0;
+	margin: 0;
+	padding-left: 10px;
+	background-color: transparent;
+	border: none;
+	font-weight: 800;
+	font-size: 34px;
+	line-height: 36px;
+	letter-spacing: 6px;
+	color: $white;
+}
+
+.quantity input:focus {
+	outline: 0;
+}
+
+.quantity-nav {
+	float: left;
+	position: relative;
+	height: 42px;
+}
+
+.quantity-button {
+	position: relative;
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 1.7;
+	-webkit-transform: translateX(-100%);
+	transform: translateX(-100%);
+	user-select: none;
+}
+
+.quantity-button.quantity-up {
+	position: absolute;
+	// height: 50%;
+	top: 15px;
+	right: -170px;
+}
+
+.quantity-button.quantity-down {
+	position: absolute;
+	// height: 50%;
+	top: 11px;
+	right: -130px;
 }
