@@ -260,6 +260,7 @@
 
 	.slick-list {
 		min-height: 670px;
+		height: 100%;
 	}
 
 	.slick-current {
@@ -588,6 +589,11 @@
 	font-weight: 800;
 	display: flex;
 	align-items: center;
+	justify-content: flex-end;
+}
+
+.subtitle__head-sleep {
+	justify-content: flex-start;
 }
 
 .subtitle__head-right {
@@ -605,6 +611,7 @@
 .subtitle__head-star {
 	margin-left: 45px;
 	width: 315px;
+	display: flex;
 }
 
 .travel-slider__descr,
@@ -619,13 +626,21 @@
 }
 
 .descr {
-	width: 550px;
+	width: 590px;
 	margin-left: 80px;
 
 	&__head img {
 		opacity: 0.9;
-		margin-left: 40px;
+		// margin-left: 40px;
 	}
+}
+
+.descr__head.subtitle__head.subtitle__head-left img {
+	margin-left: 30px;
+}
+
+.descr-shop {
+	width: 325px;
 }
 
 .bitmap-airline {
@@ -705,7 +720,8 @@
 
 .travel-slider__info-title,
 .sleep-slider__info-title,
-.summ {
+.summ,
+.price {
 	display: flex;
 	font-weight: 800;
 	font-size: 34px;
@@ -792,10 +808,231 @@
 	justify-content: space-between;
 }
 
+//////////////////////////////////////////////
+.shop {
+	position: relative;
+	height: 1050px;
+	margin-bottom: 70px;
+
+	.slider-arrow.slider-arrow__left,
+	.slider-arrow.slider-arrow__right {
+		opacity: .5;
+	}
+}
+
+.shop__slider {
+
+	&-item {
+		height: 850px;
+	}
+
+	&-inner {
+		display: flex;
+		background-image: url(../img/shop-image.png);
+		background-repeat: no-repeat;
+		background-position: right;
+		width: 100%;
+	}
+
+	&-info {
+		margin-top: 280px;
+		width: 45%;
+	}
+
+	&-price {
+		margin-top: 50px;
+	}
+
+	&-btn {
+		justify-content: flex-start;
+		margin-left: 80px;
+		margin-top: 40px;
+	}
+
+	&-content {
+		position: relative;
+		top: 145px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		max-width: 900px;
+		width: 100%;
+	}
+}
 
 
+.surfboard {
+
+	&__box {
+		position: absolute;
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+.surfboard__box.point-1 {
+	top: 220px;
+	left: 165px;
+}
+
+.surfboard__box.point-2 {
+	top: 290px;
+	left: -6px;
+}
+
+.surfboard__box.point-3 {
+	top: 610px;
+	left: 52px;
+}
+
+.surfboard__box-circle {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: $white;
+	cursor: pointer;
+	&.active {
+		.circle-row {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+	}
+}
+
+.circle-row {
+	position: absolute;
+	background-color: $green;
+	width: 12px;
+	height: 2px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) rotate(0deg);
+
+	& + .circle-row {
+		transform: translate(-50%, -50%) rotate(90deg);
+	}
+}
+
+.surfboard__box-circle.active + .surfboard__box-content {
+	display: block;
+}
+
+.surfboard__box-content {
+	display: none;
+	font-size: 24px;
+	line-height: 24px;
+	width: 255px;
+	margin-left: 115px;
+}
+
+.surfboard__box-content::before {
+	position: absolute;
+	content: "";
+	top: 10px;
+	left: 40px;
+	width: 80px;
+	height: 1px;
+	background: $white;
+	opacity: 0.5;
+}
+
+.subtitle__head-star,
+.price {
+	margin-left: 65px;
+}
+
+.price {
+	padding-left: 20px;
+	margin-top: 30px;
+}
+
+sup {
+	top: 0.5em;
+	margin-left: 15px;
+}
+
+.shop__exstras {
+	position: absolute;
+	bottom: 0;
+	right: 25px;
+	margin-right: 50px;
+	width: 380px;
+
+	&-title {
+		font-weight: 800;
+		font-size: 28px;
+		line-height: 40px;
+		text-transform: uppercase;
+		margin-bottom: 25px;
+	}
+
+	&-inner {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	&-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: center;
+		height: 222px;
+
+		img {
+			width: 103px;
+			height: 105px;
+			margin-bottom: 35px;
+		}
+	}
+
+	&-name {
+		font-size: 18px;
+		line-height: 22px;
+		text-align: right;
+		letter-spacing: 8px;
+		text-transform: uppercase;
+		opacity: 0.5;
+		margin-bottom: 8px;
+	}
+
+	&-price {
+		font-size: 18px;
+		line-height: 40px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+////////////////////////////////////////
+.footer__button {
+	display: flex;
+	justify-content: center;
+	font-weight: 800;
+	font-size: 32px;
+	line-height: 48px;
+	margin-bottom: 30px;
 
 
+	.btn {
+		span {
+			width: 140px;
+			text-align: center;
+			padding-right: 0;
+		}
+	}
+}
+
+.footer__info {
+	font-weight: 300;
+	font-size: 12px;
+	line-height: 14px;
+	text-align: center;
+	letter-spacing: 1.05px;
+	opacity: 0.5;
+}
 
 
 

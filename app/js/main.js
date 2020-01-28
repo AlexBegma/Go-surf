@@ -31,6 +31,15 @@ $(function(){
 		focusOnSelect: true,
 	});
 
+	$('.shop__slider').slick({
+		infinite: true,
+		fade: true,
+		prevArrow: '<img class="slider-arrow slider-arrow__left" src="img/arrow-left.svg" alt="arrow-left">',
+		nextArrow: '<img class="slider-arrow slider-arrow__right" src="img/arrow-right.svg" alt="arrow-right">',
+		slidesToShow: 1,
+		slidesToScroll: 1,
+	});
+
 	// CodePen Home input number custom style:
 
 	$('<div class="quantity-nav"><div class="quantity-button quantity-up"><img src="img/plus.png" alt="plus"></div><div class="quantity-button quantity-down"><img src="img/minus.png" alt="minus"></div></div>').insertAfter('.quantity input');
@@ -73,5 +82,9 @@ $(function(){
 
 	let summ = $('.nights').val() * $('.summ').data('nights') + $('.guests').val() * $('.summ').data('guests');
 	$('.summ').html('$' + summ);
+
+	$('.surfboard__box-circle').on('click', function(){
+		$(this).toggleClass('active')
+	});
 
 });
